@@ -8,7 +8,7 @@ public class Main {
         JFrame window = new JFrame();  // Create the JFrame instance
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setResizable(false);
-        window.setTitle("GoofyGame");
+        window.setTitle("Escape Room");
 
         GamePanel gamePanel = new GamePanel(window);  // Pass the JFrame instance to GamePanel
         window.add(gamePanel);
