@@ -9,8 +9,8 @@ public class Main {
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setResizable(false);
         window.setTitle("Escape Room");
-        ImageIcon image = new ImageIcon();
-        
+        ImageIcon image = new ImageIcon(fairy_tail_logo.jpg);
+        window.setIconImage(image.getImage());
         GamePanel gamePanel = new GamePanel(window);  // Pass the JFrame instance to GamePanel
         window.add(gamePanel);
         window.pack();
