@@ -47,10 +47,8 @@ public class GamePanel extends JPanel implements Runnable {
         this.window = window;  // Assign passed JFrame to the field
         // Set the size of the panel to match the calculated screen width and height
         this.setPreferredSize(new Dimension(screenWidth, screenHeight));
-
         // Set the background color of the game panel to black
         this.setBackground(Color.black);
-
         // Enable double buffering for smoother rendering
         this.setDoubleBuffered(true);
         // Enables Key Handling for movement
@@ -58,20 +56,12 @@ public class GamePanel extends JPanel implements Runnable {
         // To focus game panel's receive key input
         this.setFocusable(true);
         this.requestFocusInWindow(); // Ensure the panel gains focus
-
         // Initialize TileManager and Player
         tileM = new TileManager(this);
         player = new Player(this, keyH);
-
-        // Full Screen
         tempScreen = new BufferedImage(screenWidth, screenHeight, BufferedImage.TYPE_INT_ARGB);
         g2 = (Graphics2D) tempScreen.getGraphics();
-
-
     }
-
-
-
 
 
     public void startGameThread() {
@@ -81,7 +71,8 @@ public class GamePanel extends JPanel implements Runnable {
     }
 
     @Override
-    public void run() {
+    public void run() 
+    {
         double drawInterval = 1000000000 / FPS; // 0.01666 seconds
         double nextDrawTime = System.nanoTime();
         double delta = 0;
