@@ -1,1 +1,11 @@
+package tile;
 
+import java.awt.image.BufferedImage;
+
+public class maze_bg
+{
+    public BufferedImage imageb;
+    boolean collision = false;
+
+    
+}
